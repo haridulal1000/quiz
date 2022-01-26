@@ -1,4 +1,3 @@
-import react from "react";
 function Score(prop){
     return(
         <h1>Score:{prop.score}</h1>
