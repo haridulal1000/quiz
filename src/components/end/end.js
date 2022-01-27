@@ -4,7 +4,6 @@ import { useEffect } from 'react';
 function End(prop){
     const navigate=useNavigate();
     useEffect(function(){
-        console.log('logged',prop.loggedIn);
         if(prop.loggedIn===false){
             navigate('/');
         }

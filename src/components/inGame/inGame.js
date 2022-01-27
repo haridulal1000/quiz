@@ -10,7 +10,6 @@ function InGame(prop){
     const [renderState,setRenderState]=useState(false);
     const navigate=useNavigate();
     useEffect(function(){
-        console.log('logged',prop.loggedIn);
         if(prop.loggedIn===false){
             navigate('/');
         }
