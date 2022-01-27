@@ -5,7 +5,6 @@ function Question(prop) {
     const navigate=useNavigate();
     useEffect(
         function(){
-            console.log('useEffect')
             if(prop.renderState){
                 resetAnswers();
             }
@@ -29,7 +28,6 @@ function Question(prop) {
             navigate('/end');
         }
     prop.setCurrentQuestion(prop.currentQuestion+1);
-    console.log('nextQue');
     prop.setRenderState(true);
 }
 function resetAnswers(){
