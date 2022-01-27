@@ -2,6 +2,8 @@ import './end.css';
 import {useNavigate} from 'react-router-dom';
 import { useEffect } from 'react';
 function End(prop){
+    const audio=new Audio('./sounds/end.mp3');
+    audio.play();
     const navigate=useNavigate();
     useEffect(function(){
         if(prop.loggedIn===false){
