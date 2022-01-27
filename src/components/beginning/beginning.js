@@ -7,7 +7,7 @@ function Beginning(prop){
         <div>
             <h1>Welcome to Quiz Mania....</h1>
         </div>
-        <input type='text' placeholder='Enter your userName' id='username'></input>
+        <input type='text' placeholder='Enter your username' id='username'></input>
         <div><button className="start-btn" onClick={begin}>Press to Start</button></div>
         </div>
     );

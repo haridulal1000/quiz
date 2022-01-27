@@ -12,14 +12,14 @@ function Question(prop) {
     );
     return (
         <div className="question-container">
-            <h1>{prop.currentQuestion+1}. {prop.questions.question}</h1>
+            <h1 className="question-item">{prop.currentQuestion+1}. {prop.questions.question}</h1>
             <div className="answers-container">
                 <button className="answer-item" onClick={function(){checkAnswer(prop.questions.answers,prop.questions.answers[0])}}>{prop.questions.answers[0].answer}</button>
                 <button className="answer-item" onClick={function(){checkAnswer(prop.questions.answers,prop.questions.answers[1])}}>{prop.questions.answers[1].answer}</button>
                 <button className="answer-item" onClick={function(){checkAnswer(prop.questions.answers,prop.questions.answers[2])}}>{prop.questions.answers[2].answer}</button>
                 <button className="answer-item" onClick={function(){checkAnswer(prop.questions.answers,prop.questions.answers[3])}}>{prop.questions.answers[3].answer}</button>
             </div>
-            <div><button className="next-btn" onClick={nextQuestion}>{prop.currentQuestion===4?'Finish':'Next'}</button></div>
+            <div className="next-btn-div"><button className="next-btn" onClick={nextQuestion}>{prop.currentQuestion===4?'Finish':'Next'}</button></div>
 
         </div>
     );
