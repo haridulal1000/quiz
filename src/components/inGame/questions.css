@@ -21,7 +21,7 @@
         border: 2px solid black;
         border-radius: 10px;
         display: grid;
-        grid-template-rows: 20% 55% 15%;
+        grid-template-rows: auto 55% 15%;
         margin-top: 0;
     }
     
