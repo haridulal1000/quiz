@@ -12,8 +12,10 @@ function Beginning(prop){
         </div>
     );
     function begin(){
-        if(document.getElementById('username').value===''){
+        let text=document.getElementById('username').value.replace(/ * /,'');
+        if(text===''){
             alert('Enter your username.')
+            document.getElementById('username').value='';
             return;
         }
         prop.setLoggedIn(true);
