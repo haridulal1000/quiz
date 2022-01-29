@@ -7,7 +7,6 @@ import { Navigate, useNavigate } from "react-router";
 
 function InGame(prop){
     const [currentQuestion,setCurrentQuestion]=useState(0);
-    const [renderState,setRenderState]=useState(false);
     const navigate=useNavigate();
     useEffect(function(){
         if(prop.loggedIn===false){
@@ -17,7 +16,7 @@ function InGame(prop){
     return(
         <>
         <Score score={prop.score}/>
-        <Question questions={questionSet[currentQuestion]} setCurrentQuestion={setCurrentQuestion} currentQuestion={currentQuestion} score={prop.score} setScore={prop.setScore} renderState={renderState} setRenderState={setRenderState}/>
+        <Question questions={questionSet[currentQuestion]} setCurrentQuestion={setCurrentQuestion} currentQuestion={currentQuestion} score={prop.score} setScore={prop.setScore} />
         </>
     );
 }

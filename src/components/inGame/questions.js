@@ -4,10 +4,10 @@ import "./questions.css";
 function Question(prop) {
   const navigate = useNavigate();
   useEffect(function () {
-    if (prop.renderState) {
+
       resetAnswers();
-    }
-  });
+    
+  },[prop.currentQuestion]);
   return (
     <div className="question-container">
       <h1 className="question-item">
@@ -59,7 +59,6 @@ function Question(prop) {
       navigate("/end");
     }
     prop.setCurrentQuestion(prop.currentQuestion + 1);
-    prop.setRenderState(true);
   }
   function resetAnswers() {
     document.querySelectorAll(".answer-item").forEach((element) => {
@@ -83,7 +82,6 @@ function Question(prop) {
           [i].classList.add("correct-answer");
       }
     }
-    prop.setRenderState(false);
     if (choose.correct) {
       prop.setScore(prop.score + 1);
       const audio = new Audio("./sounds/correct.wav");
